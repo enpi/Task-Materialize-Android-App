@@ -18,6 +18,8 @@ implements GetMemesCallback {
 
     private ListView mMemesListView;
     private ProgressBar mLoadingProgressBar;
+
+    // FAB-Button
     private ImageButton infoButton;
 
 
@@ -30,6 +32,8 @@ implements GetMemesCallback {
         mMemesListView      = (ListView) findViewById(R.id.activity_main_memes_listview);
         mLoadingProgressBar = (ProgressBar) findViewById(R.id.activity_main_loading_indicator);
         infoButton = (ImageButton) findViewById(R.id.infoButton);
+
+        // Añadimos una ventana de diálogo al hacer click en el fab button
 
         infoButton.setOnClickListener( new View.OnClickListener() {
             @Override
