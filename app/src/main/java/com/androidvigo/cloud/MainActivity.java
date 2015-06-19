@@ -1,10 +1,12 @@
 package com.androidvigo.cloud;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -13,7 +15,7 @@ import android.widget.ProgressBar;
 import java.util.List;
 
 
-public class MainActivity extends Activity
+public class MainActivity extends ActionBarActivity
 implements GetMemesCallback {
 
     private ListView mMemesListView;
@@ -50,6 +52,11 @@ implements GetMemesCallback {
 
             }
         });
+
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
+            setSupportActionBar(toolbar);
+        }
 
     }
 

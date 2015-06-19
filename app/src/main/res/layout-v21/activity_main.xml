@@ -4,6 +4,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" >
+
+    </include>
+
 
     <Button
         android:layout_width="match_parent"
@@ -23,8 +29,8 @@
         android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:id="@+id/frameLayout">
+        android:id="@+id/frameLayout"
+        android:layout_below="@+id/tool_bar">
 
 
         <ListView
@@ -46,7 +52,7 @@
             android:layout_margin="15dp"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:src="@drawable/info_icon"
+            android:src="@drawable/info_button"
             android:background="@drawable/circle"
             android:id="@+id/infoButton"
             android:layout_gravity="right|bottom" />
