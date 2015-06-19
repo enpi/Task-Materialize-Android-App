@@ -1,6 +1,6 @@
 # Android App - Task: Materialize this app.
 
-# Autores ( Material Design )
+## Autores ( Material Design )
 
 Julio Martinez Martinez-Checa
 
